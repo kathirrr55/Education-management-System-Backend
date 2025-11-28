@@ -1,8 +1,6 @@
 // Models/signup.js
 
 import mongoose from "mongoose";
-// import bcrypt from "bcrypt";
-
 // Define the schema
 const signupSchema = new mongoose.Schema(
   {

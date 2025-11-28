@@ -1,10 +1,10 @@
 // createDefaultUser.js
 
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+// import bcrypt from "bcrypt";
 import Signup from "./Models/signup.js"; // adjust path if needed
 import dotenv from "dotenv";
-
+     
 dotenv.config();
 
 const createDefaultUser = async () => {
@@ -21,7 +21,7 @@ const createDefaultUser = async () => {
     const existingUser = await Signup.findOne({ email });
     if (existingUser) {
       console.log("User already exists, updating password...");
-      const hashedPassword = await bcrypt.hash(password, 10);
+      // const hashedPassword = await bcrypt.hash(password, 10);
       existingUser.password = hashedPassword;
       existingUser.name = name; // update name too
       await existingUser.save();
@@ -30,7 +30,7 @@ const createDefaultUser = async () => {
     }
 
     // Hash password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create new user
     const newUser = new Signup({

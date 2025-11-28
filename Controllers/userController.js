@@ -1,6 +1,5 @@
 // Controllers/userController.js
 
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import categorydata from "../Models/product.js";
@@ -8,7 +7,7 @@ import signup from "../Models/signup.js";
 import subscriptiondata from "../Models/subscription.js";
 
 import quizdata from "../Models/quiz.js";
-import attemptdata from "../Models/attempt.js";
+import attemptdata from "../Models/attempt.js";  
 
 const saltRounds = 10;
 
